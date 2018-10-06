@@ -1,0 +1,215 @@
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --c:0deg; 
+}
+
+html {
+    font-size: 16px;
+    line-height: 1.6;
+    font-family: 'web font', 'osx fallback', 'win fallback', sans-serif;
+    /*font-family: font stack required for body text */
+}
+
+h1,
+h2,
+h3,
+h4 {
+    /*font-family: font stack required for headings */
+    font-family: 'web font', 'osx fallback', 'win fallback', serif;
+}
+
+.container {
+    max-width: 1500px;
+}
+
+.subnav {
+    display: flex;
+    flex-direction:row;
+    justify-content:flex-end;
+    background-color: hsl(var(--c), 80%, 98%);
+    padding: 0rem 4rem;
+}
+
+.subnav a {
+    font-size: 0.707rem;
+    color: hsl(var(--c), 0%, 70%);
+    flex-basis: auto;
+    flex-grow:0.03;
+    text-align: right;
+}
+
+.mainnav {
+    display: flex;
+    flex-direction: row;
+    background-color: hsl(var(--c), 80%, 90%);
+    justify-content: space-between;
+    padding: 0rem 4rem;
+}
+
+.mainnav a {
+    color: hsl(var(--c), 100%, 100%);
+    text-decoration:none;
+}
+
+.mainnav a:hover{
+    color: hsl(var(--c), 50%, 30%);
+    text-decoration-line: underline;
+}
+
+.masthead {
+    padding: 10rem 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(https://i.pinimg.com/564x/5f/2b/88/5f2b88e29dc8fe7d18db2cc331b77486.jpg);
+    background-position:bottom;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+.times-logo {
+    width: 40%;
+    clear: both;
+}
+
+.masthead h1 {
+    font-size: 3.998rem;
+    color: hsl(var(--c), 100%, 100%);
+    text-shadow: 2px 2px 2px hsl(var(--c), 30%, 50%);
+}
+
+.content {
+    padding: 2rem 2rem;
+    margin: 2rem;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas:
+        "story1 story1"
+        "story2 story3";
+}
+
+.content .story {
+    line-height: 40px;
+}
+
+main p:nth-child(1) {
+    color: aqua;
+}
+
+.story.lead-story {
+    background-color: hsl(var(--c), 60%, 98%);
+    border: 2rem solid hsl(var(--c), 60%, 98%);
+    box-shadow: 5px 5px 0px hsl(var(--c), 80%, 90%);
+    color: hsl(var(--c), 50%, 40%);
+    grid-area: story1;
+}
+
+.story.lead-story p:nth-child(3):first-letter{
+    font-size: 1.999rem;
+}
+
+h1.story-title {
+    color: hsl(var(--c), 50%, 40%);
+}
+
+.story img {
+    float: left;
+    width: 40%;
+    margin: 1rem 2rem 1rem 0rem;
+    border: 1rem solid hsl(var(--c), 100%, 100%);
+    box-shadow: 2px 2px 2px hsl(var(--c), 0%, 80%);
+}
+
+main article:nth-child(2),
+main article:nth-child(3) {
+    margin-top: 2rem;
+    padding: 1rem;
+    border: 1rem solid hsl(var(--c), 60%, 98%);
+    box-shadow: 5px 5px 0px hsl(var(--c), 80%, 90%);
+    color: hsl(var(--c), 0%, 30%);
+}
+
+.story blockquote {
+    quotes: "\201C""\201D";
+    color: hsl(var(--c), 0%, 0%);
+    font-family:monospace;
+    text-align: right;
+}
+
+.story blockquote::before {
+    content: open-quote;
+}
+
+.story blockquote::after {
+    content: close-quote;
+}
+
+.story p.byline {
+    color: hsl(var(--c), 0%, 80%);
+}
+
+p.byline span.author {
+    color: hsl(var(--c), 50%, 80%);
+}
+
+p.byline span.pub {
+    font-weight: 100;
+}
+
+.foot {
+    padding: 8rem 4rem 1rem;
+        background-image: url(https://i.pinimg.com/564x/5f/2b/88/5f2b88e29dc8fe7d18db2cc331b77486.jpg);
+    background-position:top;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+.foot p {
+    text-align: center;
+    font-size: 0.707rem;
+    color: hsl(var(--c), 0%, 100%);
+    text-shadow: 1px 1px hsl(var(--c), 40%, 50%)
+}
+
+@media(max-width:800px){
+   :root{
+    --c:260deg; 
+}
+    .masthead h1{
+    font-size: 2.827rem;
+    color: hsl(var(--c), 100%, 100%);
+    text-shadow: 2px 2px 2px hsl(var(--c), 30%, 50%);
+}
+}
+
+@media(max-width:500px){
+   :root{
+    --c:180deg; 
+}
+    .masthead h1{
+    font-size: 1.999rem;
+    color: hsl(var(--c), 100%, 100%);
+    text-shadow: 2px 2px 2px hsl(var(--c), 30%, 50%);
+}
+       .times-logo {
+    width: 60%;
+    clear: both;
+}
+}
+
+@media(min-width:1300px){
+   .times-logo {
+    width: 30%;
+    clear: both;
+}
+}
