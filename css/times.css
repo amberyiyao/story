@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Abril Fatface");
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+@import url("https://fonts.googleapis.com/css?family=Indie Flower");
+
 *,
 *::after,
 *::before {
@@ -6,14 +10,14 @@
     box-sizing: border-box;
 }
 
-:root{
-    --c:0deg; 
+:root {
+    --c: 0deg;
 }
 
 html {
     font-size: 16px;
     line-height: 1.6;
-    font-family: 'web font', 'osx fallback', 'win fallback', sans-serif;
+    font-family: Ubuntu, Helvetica, Arial, sans-serif;
     /*font-family: font stack required for body text */
 }
 
@@ -22,7 +26,7 @@ h2,
 h3,
 h4 {
     /*font-family: font stack required for headings */
-    font-family: 'web font', 'osx fallback', 'win fallback', serif;
+    font-family: Abril Fatface, Helvetica, Arial, serif;
 }
 
 .container {
@@ -31,8 +35,8 @@ h4 {
 
 .subnav {
     display: flex;
-    flex-direction:row;
-    justify-content:flex-end;
+    flex-direction: row;
+    justify-content: flex-end;
     background-color: hsl(var(--c), 80%, 98%);
     padding: 0rem 4rem;
 }
@@ -41,7 +45,7 @@ h4 {
     font-size: 0.707rem;
     color: hsl(var(--c), 0%, 70%);
     flex-basis: auto;
-    flex-grow:0.03;
+    flex-grow: 0.03;
     text-align: right;
 }
 
@@ -55,10 +59,10 @@ h4 {
 
 .mainnav a {
     color: hsl(var(--c), 100%, 100%);
-    text-decoration:none;
+    text-decoration: none;
 }
 
-.mainnav a:hover{
+.mainnav a:hover {
     color: hsl(var(--c), 50%, 30%);
     text-decoration-line: underline;
 }
@@ -69,11 +73,11 @@ h4 {
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    background-image: url(https://i.pinimg.com/564x/5f/2b/88/5f2b88e29dc8fe7d18db2cc331b77486.jpg);
+    background-image: url(../img/picture.jpg);
     background-position:bottom;
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-attachment:fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .times-logo {
@@ -113,7 +117,7 @@ main p:nth-child(1) {
     grid-area: story1;
 }
 
-.story.lead-story p:nth-child(3):first-letter{
+.story.lead-story p:nth-child(3):first-letter {
     font-size: 1.999rem;
 }
 
@@ -141,7 +145,7 @@ main article:nth-child(3) {
 .story blockquote {
     quotes: "\201C""\201D";
     color: hsl(var(--c), 0%, 0%);
-    font-family:monospace;
+    font-family: Indie Flower, Helvetica, Arial, sans-serif;
     text-align: right;
 }
 
@@ -167,11 +171,11 @@ p.byline span.pub {
 
 .foot {
     padding: 8rem 4rem 1rem;
-        background-image: url(https://i.pinimg.com/564x/5f/2b/88/5f2b88e29dc8fe7d18db2cc331b77486.jpg);
-    background-position:top;
-    background-repeat:no-repeat;
-    background-size:cover;
-    background-attachment:fixed;
+    background-image: url(../img/picture.jpg);
+        background-position:top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .foot p {
@@ -181,35 +185,38 @@ p.byline span.pub {
     text-shadow: 1px 1px hsl(var(--c), 40%, 50%)
 }
 
-@media(max-width:800px){
-   :root{
-    --c:260deg; 
-}
-    .masthead h1{
-    font-size: 2.827rem;
-    color: hsl(var(--c), 100%, 100%);
-    text-shadow: 2px 2px 2px hsl(var(--c), 30%, 50%);
-}
+@media(max-width:800px) {
+    :root {
+        --c: 260deg;
+    }
+
+    .masthead h1 {
+        font-size: 2.827rem;
+        color: hsl(var(--c), 100%, 100%);
+        text-shadow: 2px 2px 2px hsl(var(--c), 30%, 50%);
+    }
 }
 
-@media(max-width:500px){
-   :root{
-    --c:180deg; 
-}
-    .masthead h1{
-    font-size: 1.999rem;
-    color: hsl(var(--c), 100%, 100%);
-    text-shadow: 2px 2px 2px hsl(var(--c), 30%, 50%);
-}
-       .times-logo {
-    width: 60%;
-    clear: both;
-}
+@media(max-width:500px) {
+    :root {
+        --c: 180deg;
+    }
+
+    .masthead h1 {
+        font-size: 1.999rem;
+        color: hsl(var(--c), 100%, 100%);
+        text-shadow: 2px 2px 2px hsl(var(--c), 30%, 50%);
+    }
+
+    .times-logo {
+        width: 60%;
+        clear: both;
+    }
 }
 
-@media(min-width:1300px){
-   .times-logo {
-    width: 30%;
-    clear: both;
-}
+@media(min-width:1300px) {
+    .times-logo {
+        width: 30%;
+        clear: both;
+    }
 }
